@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Data Finder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Customer Data Finder</h1>
+
+  
+    <label for="category">Enter Product Category:</label>
+    <input type="text" id="category" placeholder="Type to search..." oninput="showSuggestions('category')">
+    <div id="category-suggestions" class="suggestions"></div>
+
+    <!-- Location input with suggestions -->
+    <label for="location">Enter Location:</label>
+    <input type="text" id="location" placeholder="Type to search..." oninput="showSuggestions('location')">
+    <div id="location-suggestions" class="suggestions"></div>
+
+    <button onclick="fetchCustomerData()">Search</button>
+
+    <h2>Matching Customers:</h2>
+    <div id="customerResults"></div>
+
+    <script src="app.js"></script>
+</body>
+</html>
